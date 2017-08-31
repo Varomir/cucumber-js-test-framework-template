@@ -1,0 +1,23 @@
+{
+  "name": "cucumber-js-test-framework-template",
+  "description": "E2E test automation framework with Cucumber.js and Selenium",
+  "version": "0.0.1",
+  "homepage": "http://github.com/Varomir/cucumber-js-test-framework-template",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Varomir/cucumber-js-test-framework-template.git"
+  },
+  "scripts": {
+    "e2e-test": "./node_modules/.bin/cucumber-js features/overview.feature features/local-env.feature -f json:report/cucumber-report.json",
+    "e2e-report": "npm run posttest",
+    "test": "./node_modules/.bin/cucumber-js features/overview.feature features/local-env.feature -f json:report/cucumber-report.json",
+    "posttest": "./node_modules/.bin/cucumber-js report/genreport.feature -r report/step_definitions"
+  },
+  "devDependencies": {
+    "cucumber": "3.0.1",
+    "cucumber-html-reporter": "3.0.1",
+    "selenium-webdriver": "3.5.0",
+    "iedriver": "3.5.1",
+    "chai": "4.1.1"
+  }
+}
